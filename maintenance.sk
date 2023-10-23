@@ -1,0 +1,32 @@
+# Vous pouvez changer le motd à la ligne 26
+
+on server ping:           
+   set motd to "%{motd}%"
+
+command /maintenance [<text>]:
+    permission: start.maintenance
+    trigger:
+        if arg 1 is not set:
+            send "&6Options : start, stop"
+        if arg 1 is "start":
+            if {maintenance} = true:
+                send "&6Le serveur est déjà en maintenance..."
+            else:
+                set {maintenance} to true
+                set {motd} to "&cLe serveur est actuellement en maintenance..."
+                send "&6Le serveur est désormais en maintenance..." to player
+                loop all players:
+                    if loop-player don't have permission "join.maintenance":
+                        kick loop-player because "&cLe serveur est actuellement en maintenance...%nl%&6Revenez plus tard !"
+        if arg 1 is "stop":
+            if {maintenance} = false:
+                send "&6Le serveur n'est pas en maintenance..." to player
+            else:
+                set {maintenance} to false
+                set {motd} to "&cMon &6super &aserveur" # Modifiable
+                send "&6Le serveur n'est plus en maintenance..." to player
+
+on join:
+    if {maintenance} is true:
+        if player don't have permission "join.maintenance":
+            kick player because "&cLe serveur est actuellement en maintenance...%nl%&6Revenez plus tard !"
