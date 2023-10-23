@@ -8,3 +8,5 @@
 <p>start.maintenance -> démarrer et arrêter les maintenances<br />join.maintenance -> rejoindre le serveur lors d'une maintenance</p>
 <h2>Images :</h2>
 <p>Motd :<br /><img src="https://i.goopics.net/s4biuc.png"><br/>Message :<br /><img src="https://i.goopics.net/m91bar.png"></p>
+<h2>Téléchargement :</h2>
+<p>Vous pouvez télécharger la ressource <a href="https://skript-mc.fr/forum/applications/core/interface/file/attachment.php?id=4091">ici</a>.</p>
