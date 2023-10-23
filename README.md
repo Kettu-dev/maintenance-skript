@@ -1,7 +1,7 @@
 <h1>Skript - Maintenance</h1>
 <p>Un simple plugin de maintenance...</p>
 <h2>Addon :</h2>
-<p>Le plugin a besoin de l'addon <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/">SkQuery</a>.</p>
+<p>Le plugin a besoin de l'addon <a href="https://www.spigotmc.org/resources/skquery-1-13-1-19.36631/" target="blank">SkQuery</a>.</p>
 <h2>Commandes :</h2>
 <p>/maintenance start -> démarrer une maintenance<br/>/maintenance stop -> stopper la maintenance</p>
 <h2>Permissions :</h2>
